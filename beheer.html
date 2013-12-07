@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <title>Turfjesapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.3.2.css"/>
+    <link rel="stylesheet" href="iscroll/jquery.mobile.iscrollview.css"/>
+    <link rel="stylesheet" href="iscroll/jquery.mobile.iscrollview-pull.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript" src="iscroll.js"></script>
+    <script src="iscroll/jquery.mobile.iscrollview.js"></script>
+
+</head>
+<body>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+
+    <div data-role="page" id="namenOverzicht">
+        <div data-role="header" data-theme="c">
+            <a href="#menu" data-icon="back">Menu</a>
+            <h1>Turfjesapp</h1>
+        </div>
+ 
+        <div data-role="content" id="content" style="background-image: url('http://cdn3.tnwcdn.com/wp-content/blogs.dir/1/files/2013/08/1.jpg'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;" data-iscroll>
+            <div data-role="collapsible" data-theme="b" data-content-theme="b">
+                <h3>Naam toevoegen</h3>
+                <form>
+                    <input type="text" placeholder="naam" id="naam"></input>
+                    <input type="number" placeholder="aantal turfjes" id="turfjes"></input>
+                </form>
+                <span id="voegtoe2"><a href="" id="voegtoe" data-transition="slideup" data-role="button" data-rel="popup" rel="external" data-theme="b">Toevoegen</a></span>
+                <div data-role="popup" id="transitionExample" class="ui-content" data-theme="e">
+                    <p>Naam <span id="naampje" style="font-weight: bold;"></span> toegevoegd met <span id="turfpjes" style="font-weight: bold;"></span> turfjes.</p>
+                </div>
+            </div>
+            <div data-role="collapsible" data-theme="a" data-content-theme="b">
+                <h3>Naam verwijderen</h3>
+                <ul id="namen2" data-role="listview" data-inset="true" class="ui-icon-alt" data-theme="d" data-count-theme="d"></ul>
+                <div data-role="popup" id="popupBasic" data-overlay-theme="a" class="ui-corner-all" data-theme="d">
+                    <div data-role="header" data-theme="a" class="ui-corner-top">
+                        <h1>Naam verwijderen?</h1>
+                    </div>
+                    <p>Wil je <b><span id="naampje"></span></b> verwijderen?</p>
+                    <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Nee</a>
+                    <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">Ja</a>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="panel" id="menu" data-position="left" data-display="reveal" data-theme="a">
+            <ul id="onderdelen" data-role="listview" data-inset="true" data-theme="d" class="ui-icon-alt">
+                <li>
+                    <a href="index.html">Turfjes overzicht</a>
+                </li>
+                <li>
+                    <a href="#" data-rel="close">Namen beheren</a>
+                </li>
+                <li>
+                    <a href="over.html">Over</a>
+                </li>
+            </ul>
+            <img src="img/TG_LOGO.svg" id="tg_logo"/>
+        </div>
+        <script>
+            var socket;
+                function connect() {
+                    socket = io.connect('http://turfjes.jit.su/');
+                }
+                var dfd = $.Deferred();
+
+                dfd
+                    .done(connect)
+                    .done(function () {
+                        console.log('connected!');
+                        $('#voegtoe').click(function(event) {
+                            event.stopImmediatePropagation();
+                            event.preventDefault();
+                            var turfjes = $('#turfjes').val();
+                            var naam = $('#naam').val();
+                            socket.emit('naam toegevoegd', {naam: naam, turfjes: turfjes});
+                            $('#naampje').text(naam);
+                            $('#turfpjes').text(turfjes);
+                            $('#turfjes').val('');
+                            $('#naam').val('');
+                            console.log('toegevoegd.')
+                        });
+                        socket.emit('kom maar op', {});
+                        $('#namen2').html('');
+                        socket.on('naam', function (data) {
+                            console.log(data.naam);
+                            $('#namen2').append("<li><a id='" + data.naam + "' href='#popupBasic' data-position-to='window' data-transition='pop' data-rel='popup'>" + data.naam + "<span class='ui-li-count'>" + data.turfjes + "</span></a></li>");
+                            $('#namen2').listview('refresh');
+                        });
+                        $('#namen2').click(function (event) {
+                            console.log();
+                            $('#naampje').text(event.target.id);
+                            $('#namen2').listview('refresh');
+                        });
+                    })
+                    .done(function() {
+                    })
+                    .fail(function() {
+                        console.log('failed');
+                    });
+
+                dfd.resolve();
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64pt"
+   height="64pt"
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="svg6369"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="TG_LOGO_64_v2.svg">
+  <metadata
+     id="metadata6381">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6379" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="705"
+     inkscape:window-height="579"
+     id="namedview6377"
+     showgrid="false"
+     inkscape:zoom="4.17193"
+     inkscape:cx="32.170975"
+     inkscape:cy="34.828308"
+     inkscape:window-x="193"
+     inkscape:window-y="116"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6369">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,80"
+       id="guide6395" />
+    <sodipodi:guide
+       position="80,0"
+       orientation="-80,0"
+       id="guide6397" />
+    <sodipodi:guide
+       position="80,80"
+       orientation="0,-80"
+       id="guide6399" />
+    <sodipodi:guide
+       position="0,80"
+       orientation="80,0"
+       id="guide6401" />
+  </sodipodi:namedview>
+  <path
+     fill="#ffffff"
+     d=" M 0.00 0.00 L 64.00 0.00 L 64.00 64.00 L 0.00 64.00 L 0.00 0.00 Z"
+     id="path6371"
+     style="fill:#ff6dff;fill-opacity:0" />
+  <path
+     fill="#0046e3"
+     d=" M 10.26 12.14 C 14.38 10.80 14.54 5.73 17.02 2.78 C 21.17 1.37 24.79 4.69 28.86 4.87 C 34.06 5.77 39.11 4.17 43.94 2.47 C 50.28 1.32 48.73 10.86 54.04 12.13 C 54.92 10.52 55.11 8.01 57.16 7.42 C 58.79 6.72 60.23 7.88 61.50 8.74 C 61.34 11.07 61.35 13.98 58.84 15.10 C 52.66 18.26 45.10 16.64 39.86 12.38 C 36.70 12.05 38.30 15.16 39.75 16.24 C 43.03 18.94 46.82 21.16 50.93 22.30 C 53.18 23.02 55.03 21.27 56.91 20.36 C 58.69 21.85 60.47 23.34 62.25 24.82 C 60.44 26.51 58.65 28.21 56.87 29.93 C 50.97 27.31 44.73 25.13 38.18 25.29 C 38.20 30.44 38.23 35.58 38.15 40.73 C 43.87 42.38 50.29 39.63 52.97 34.30 C 55.93 34.79 58.87 35.44 61.85 35.86 C 61.92 38.27 60.13 39.99 58.91 41.88 C 56.28 45.76 55.06 50.41 54.75 55.04 C 56.35 56.55 58.06 58.60 56.86 60.91 C 56.09 64.01 50.98 63.59 50.47 60.57 C 50.19 56.49 50.43 52.40 50.43 48.31 C 47.90 47.78 45.31 47.69 42.73 47.77 C 45.07 51.44 48.17 55.39 47.36 60.05 C 46.91 62.68 43.10 64.09 41.54 61.61 C 40.07 60.23 40.95 58.26 41.45 56.66 C 38.02 49.69 25.86 49.66 22.53 56.74 C 23.98 58.82 23.24 61.95 20.80 62.84 C 18.06 63.58 15.72 60.50 16.64 57.99 C 17.69 54.08 19.54 50.26 22.50 47.44 C 23.49 46.43 24.73 45.50 24.87 43.98 C 16.63 42.16 9.79 36.78 2.30 33.14 C 2.32 32.77 2.34 32.05 2.35 31.68 C 7.58 27.85 12.65 23.80 17.66 19.68 C 20.34 17.09 25.21 17.83 26.72 13.85 C 26.46 13.49 25.93 12.76 25.66 12.39 C 22.70 12.49 20.73 15.44 17.85 16.04 C 13.47 17.09 8.29 17.19 4.51 14.44 C 2.42 12.67 2.87 9.83 3.65 7.54 C 5.12 7.55 6.84 6.81 8.10 7.90 C 9.29 9.00 9.57 10.73 10.26 12.14 Z"
+     id="path6373" />
+  <path
+     fill="#ffffff"
+     d=" M 22.14 30.57 C 21.99 27.74 24.50 26.22 26.51 24.79 C 26.93 29.23 27.07 33.74 26.42 38.17 C 23.49 36.74 21.49 33.91 22.14 30.57 Z"
+     id="path6375" />
+</svg>
